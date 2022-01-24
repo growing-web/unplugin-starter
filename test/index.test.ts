@@ -1,5 +1,5 @@
-describe('index', () => {
-  it('hi jest', () => {
-    expect(1).toBe(1)
-  })
+import { test, expect } from 'vitest'
+
+test.concurrent('test', () => {
+  expect(1 + 1).toBe(2)
 })

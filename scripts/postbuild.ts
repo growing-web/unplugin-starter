@@ -21,7 +21,10 @@ async function run() {
     }
     // generate submodule .d.ts redirecting
     const name = basename(file, '.js')
-    await fs.writeFile(`${name}.d.ts`, `export { default } from './dist/${name}'\n`)
+    await fs.writeFile(
+      `${name}.d.ts`,
+      `export { default } from './dist/${name}'\n`,
+    )
   }
 }
 
